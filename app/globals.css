@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #1a1a1a;
+  --background: #ffffff;
+  --accent: #1e3a8a;
+  --accent-hover: #1e40af;
+  --gray: #6b7280;
+  --gray-light: #f3f4f6;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* Smooth link transitions */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ========================================
+   8-BIT MODE EASTER EGG
+   ======================================== */
+
+.eight-bit-mode {
+  --foreground: #000000;
+  --background: #fcbcb0;
+  --accent: #e85800;
+  --accent-hover: #ff0000;
+  --gray: #5c94fc;
+  --gray-light: #fcbcb0;
+  --border: #000000;
+}
+
+/* Pixel font for everything in 8-bit mode */
+.eight-bit-mode * {
+  font-family: var(--font-pixel), monospace !important;
+  letter-spacing: 0.05em;
+}
+
+/* Smaller text sizes for pixel font readability */
+.eight-bit-mode h1 {
+  font-size: 1.5rem !important;
+  line-height: 1.8 !important;
+}
+
+.eight-bit-mode h2 {
+  font-size: 1.25rem !important;
+  line-height: 1.6 !important;
+}
+
+.eight-bit-mode h3 {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+}
+
+.eight-bit-mode p,
+.eight-bit-mode li,
+.eight-bit-mode span,
+.eight-bit-mode a {
+  font-size: 0.65rem !important;
+  line-height: 1.8 !important;
+}
+
+/* Pixelated images */
+.eight-bit-mode img {
+  image-rendering: pixelated;
+  filter: contrast(1.1) saturate(1.2);
+}
+
+/* Sharp corners - no rounded edges in 8-bit! */
+.eight-bit-mode *,
+.eight-bit-mode *::before,
+.eight-bit-mode *::after {
+  border-radius: 0 !important;
+}
+
+/* Chunky borders */
+.eight-bit-mode [class*="border"] {
+  border-width: 4px !important;
+  border-color: #000 !important;
+}
+
+/* NES-style button */
+.eight-bit-mode button,
+.eight-bit-mode a[class*="bg-"] {
+  background: #e85800 !important;
+  color: #fff !important;
+  border: 4px solid #000 !important;
+  box-shadow: 4px 4px 0 #000 !important;
+  text-transform: uppercase;
+}
+
+.eight-bit-mode button:hover,
+.eight-bit-mode a[class*="bg-"]:hover {
+  background: #ff0000 !important;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000 !important;
+}
+
+/* Card styles */
+.eight-bit-mode [class*="rounded-lg"],
+.eight-bit-mode [class*="shadow"] {
+  box-shadow: 4px 4px 0 #000 !important;
+  border: 4px solid #000 !important;
+}
+
+/* Background pattern */
+.eight-bit-mode body {
+  background-color: #fcbcb0;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h4v4H0V0zm4 4h4v4H4V4z' fill='%23f0a090' fill-opacity='0.4'/%3E%3C/svg%3E");
+}
+
+/* Navigation in 8-bit */
+.eight-bit-mode nav,
+.eight-bit-mode header {
+  background: #5c94fc !important;
+  border-bottom: 4px solid #000 !important;
+}
+
+.eight-bit-mode nav a,
+.eight-bit-mode header a {
+  color: #fff !important;
+}
+
+/* Footer in 8-bit */
+.eight-bit-mode footer {
+  background: #228b22 !important;
+  border-top: 4px solid #000 !important;
+  color: #fff !important;
+}
+
+.eight-bit-mode footer a {
+  color: #ffff00 !important;
+}
+
+/* Accent colors for links */
+.eight-bit-mode a:not([class*="bg-"]) {
+  color: #e85800 !important;
+}
+
+.eight-bit-mode a:not([class*="bg-"]):hover {
+  color: #ff0000 !important;
+}
+
+/* Selection in 8-bit */
+.eight-bit-mode ::selection {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+/* Cursor */
+.eight-bit-mode {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M0 0h2v2H0zM2 2h2v2H2zM4 4h2v2H4zM6 6h2v2H6zM8 8h2v2H8zM2 4h2v2H2zM4 6h2v2H4zM6 8h2v2H6zM8 10h2v2H8zM10 10h2v2h-2z'/%3E%3C/svg%3E"), auto;
+}
+
