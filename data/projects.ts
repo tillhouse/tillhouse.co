@@ -48,6 +48,11 @@ export const projects: Project[] = [
       "Fractional product leadership for B2B SaaS platform. Established product processes, led discovery, and shipped key features.",
     role: "Fractional VP Product",
     image: "/images/projects/Pavilion Digital/Home dashboard MVP Executive member.png",
+    gallery: [
+      "/images/projects/Pavilion Digital/Home dashboard MVP Executive member.png",
+      "/images/projects/Pavilion Digital/Executive Membership.png",
+      "/images/projects/Pavilion Digital/Find your Pavilion Questions cta not active.png",
+    ],
     technologies: ["B2B SaaS", "Product Strategy", "User Research"],
     featured: true,
   },

@@ -4,9 +4,9 @@ import path from "path";
 // Map project slugs to their case study file names
 const caseStudyFiles: Record<string, string> = {
   ghostery: "ghostery_browser_extension_case_study.md",
+  pavilion: "pavilion_digital_case_study.md",
   // Add more mappings as you create case studies:
   // "ghostery-dawn": "ghostery_dawn_case_study.md",
-  // "pavilion": "pavilion_case_study.md",
 };
 
 export function getCaseStudyContent(slug: string): string | null {
