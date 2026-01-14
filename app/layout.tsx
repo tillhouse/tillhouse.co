@@ -30,6 +30,10 @@ export const metadata: Metadata = {
     "product management",
   ],
   authors: [{ name: "Jeremy Tillman" }],
+  icons: {
+    icon: "/images/logos/Logo Files/Favicons/browser.png",
+    apple: "/images/logos/Logo Files/Favicons/iPhone.png",
+  },
   openGraph: {
     title: "Jeremy Tillman | AI-Native Product Leadership",
     description:

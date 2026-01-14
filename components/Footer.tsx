@@ -37,11 +37,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <Link
-              href="/"
-              className="text-xl font-semibold text-gray-900 hover:text-accent transition-colors"
-            >
-              Tillhouse Ventures
+            <Link href="/" className="inline-block">
+              <img
+                src="/images/logos/Logo Files/svg/Color logo - no background.svg"
+                alt="Tillhouse Ventures"
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="mt-3 text-gray-600 text-sm max-w-xs">
               AI-native product leadership for startups building what&apos;s next.

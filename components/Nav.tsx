@@ -34,11 +34,12 @@ export function Nav() {
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link
-          href="/"
-          className="text-xl font-semibold text-gray-900 hover:text-accent transition-colors"
-        >
-          Tillhouse Ventures
+        <Link href="/" className="flex items-center">
+          <img
+            src="/images/logos/Logo Files/svg/Color logo - no background.svg"
+            alt="Tillhouse Ventures"
+            className="h-12 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}

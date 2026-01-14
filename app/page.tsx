@@ -58,7 +58,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="relative h-80 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl hidden lg:block">
+          <div className="relative h-72 sm:h-80 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
             <Image
               src="/images/headshots/Tillman-00654-Edit.jpg"
               alt="Jeremy Tillman"
@@ -77,15 +77,15 @@ export default function Home() {
           subtitle="I help startups and growing tech companies turn ideas into shipped products and scalable platforms. My work spans early validation, hands-on execution, and executive-level ownership across product, engineering, design, and growth."
           centered
         />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           {services.map((service) => {
             const Icon = service.icon;
             return (
               <div
                 key={service.title}
-                className="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                className="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow h-full"
               >
-                <div className="p-3 bg-accent/10 rounded-lg w-fit">
+                <div className="w-12 h-12 flex items-center justify-center bg-accent/10 rounded-lg">
                   <Icon size={24} className="text-accent" />
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-gray-900">
