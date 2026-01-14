@@ -2,9 +2,12 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/Button";
+import { ImageCarousel } from "@/components/ImageCarousel";
 import { projects } from "@/data/projects";
+import { getCaseStudyContent } from "@/lib/caseStudies";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 
 interface Props {
@@ -39,6 +42,7 @@ export default function ProjectPage({ params }: Props) {
     notFound();
   }
 
+  const caseStudyContent = getCaseStudyContent(params.slug);
   const currentIndex = projects.findIndex((p) => p.slug === params.slug);
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
   const nextProject =
@@ -100,49 +104,51 @@ export default function ProjectPage({ params }: Props) {
             </div>
           </div>
 
-          {/* Project Image */}
-          <div className="relative h-64 md:h-96 lg:h-auto bg-gray-100 rounded-lg overflow-hidden">
-            {project.image ? (
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover"
-              />
-            ) : (
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-accent/10 to-accent/5">
-                <span className="text-6xl font-bold text-accent/20">
-                  {project.title.charAt(0)}
-                </span>
+          {/* Project Image / Gallery */}
+          {project.gallery && project.gallery.length > 0 ? (
+            <ImageCarousel images={project.gallery} alt={project.title} />
+          ) : project.image ? (
+            <div className="relative h-72 md:h-96 lg:h-[400px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg overflow-hidden">
+              <div className="absolute inset-6">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-contain"
+                />
               </div>
-            )}
-          </div>
+            </div>
+          ) : (
+            <div className="relative h-72 md:h-96 lg:h-[400px] bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg overflow-hidden flex items-center justify-center">
+              <span className="text-6xl font-bold text-accent/20">
+                {project.title.charAt(0)}
+              </span>
+            </div>
+          )}
         </div>
       </Section>
 
-      {/* Project Details - Placeholder for more content */}
+      {/* Case Study Content */}
       <Section background="gray">
         <div className="max-w-3xl">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Project Overview
-          </h2>
-          <div className="prose prose-gray max-w-none">
-            <p>
-              This project showcases my work on {project.title} at{" "}
-              {project.company}. As {project.role}, I was responsible for
-              driving product strategy and execution.
-            </p>
-            <p>
-              More detailed case study content will be added here, including:
-            </p>
-            <ul>
-              <li>Context and challenge</li>
-              <li>My role and responsibilities</li>
-              <li>Key decisions and approach</li>
-              <li>Outcomes and results</li>
-              <li>Lessons learned</li>
-            </ul>
-          </div>
+          {caseStudyContent ? (
+            <article className="prose prose-gray prose-lg max-w-none prose-headings:text-gray-900 prose-h1:text-3xl prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900 prose-hr:my-8">
+              <ReactMarkdown>{caseStudyContent}</ReactMarkdown>
+            </article>
+          ) : (
+            <>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Project Overview
+              </h2>
+              <div className="prose prose-gray max-w-none">
+                <p>
+                  This project showcases my work on {project.title} at{" "}
+                  {project.company}. As {project.role}, I was responsible for
+                  driving product strategy and execution.
+                </p>
+              </div>
+            </>
+          )}
         </div>
       </Section>
 

@@ -9,6 +9,7 @@ export interface Project {
   description: string;
   role: string;
   image: string;
+  gallery?: string[];
   technologies: string[];
   link?: string;
   featured?: boolean;
@@ -26,14 +27,16 @@ export function ProjectCard({ project, showArrow = true }: ProjectCardProps) {
       className="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300"
     >
       {/* Image */}
-      <div className="relative h-48 bg-gray-100 overflow-hidden">
+      <div className="relative h-56 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
         {project.image ? (
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-          />
+          <div className="absolute inset-4">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
         ) : (
           <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-accent/10 to-accent/5">
             <span className="text-4xl font-bold text-accent/20">
