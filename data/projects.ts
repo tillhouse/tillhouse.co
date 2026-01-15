@@ -2,6 +2,32 @@ import { Project } from "@/components/ProjectCard";
 
 export const projects: Project[] = [
   {
+    slug: "moonfoot-labs",
+    title: "Moonfoot Labs",
+    company: "Moonfoot Labs",
+    description:
+      "AI-native product studio partnering with founders and early-stage teams to build validated, scalable products using LLM workflows and rapid prototyping.",
+    role: "Co-Founder & Managing Partner",
+    image: "/images/projects/Moonfoot Labs/Moonfoot Labs Hero Image.png",
+    technologies: ["AI", "LLM Systems", "Rapid Prototyping", "Product Strategy"],
+    featured: true,
+  },
+  {
+    slug: "innermap",
+    title: "Innermap.ai",
+    company: "Innermap",
+    description:
+      "AI-native mental wellness platform leveraging LLMs for personalized journaling and reflection experiences.",
+    role: "Product Advisor",
+    image: "/images/projects/Innermap/affi-devices.png",
+    gallery: [
+      "/images/projects/Innermap/affi-devices.png",
+      "/images/projects/Innermap/affi-laptop.png",
+    ],
+    technologies: ["AI/ML", "React Native", "LLMs", "Mental Health"],
+    featured: true,
+  },
+  {
     slug: "ghostery",
     title: "Ghostery",
     company: "Ghostery",
@@ -48,23 +74,7 @@ export const projects: Project[] = [
     ],
     technologies: ["Firefox", "Browser Development", "Privacy Tech"],
     link: "https://ghostery.com",
-    featured: true,
-  },
-  {
-    slug: "pavilion",
-    title: "Pavilion Digital",
-    company: "Pavilion",
-    description:
-      "Fractional product leadership for B2B SaaS platform. Established product processes, led discovery, and shipped key features.",
-    role: "Fractional VP Product",
-    image: "/images/projects/Pavilion Digital/Home dashboard MVP Executive member.png",
-    gallery: [
-      "/images/projects/Pavilion Digital/Home dashboard MVP Executive member.png",
-      "/images/projects/Pavilion Digital/Executive Membership.png",
-      "/images/projects/Pavilion Digital/Find your Pavilion Questions cta not active.png",
-    ],
-    technologies: ["B2B SaaS", "Product Strategy", "User Research"],
-    featured: true,
+    featured: false,
   },
   {
     slug: "ghostery-glow",
@@ -141,28 +151,21 @@ export const projects: Project[] = [
     featured: false,
   },
   {
-    slug: "innermap",
-    title: "Innermap.ai",
-    company: "Innermap",
+    slug: "pavilion",
+    title: "Pavilion Digital",
+    company: "Pavilion",
     description:
-      "AI-native mental wellness platform leveraging LLMs for personalized journaling and reflection experiences.",
-    role: "Product Advisor",
-    image: "",
-    technologies: ["AI/ML", "React Native", "LLMs", "Mental Health"],
+      "Fractional product leadership for B2B SaaS platform. Established product processes, led discovery, and shipped key features.",
+    role: "Fractional VP Product",
+    image: "/images/projects/Pavilion Digital/Home dashboard MVP Executive member.png",
+    gallery: [
+      "/images/projects/Pavilion Digital/Home dashboard MVP Executive member.png",
+      "/images/projects/Pavilion Digital/Executive Membership.png",
+      "/images/projects/Pavilion Digital/Find your Pavilion Questions cta not active.png",
+    ],
+    technologies: ["B2B SaaS", "Product Strategy", "User Research"],
     featured: false,
-  },
-  {
-    slug: "moonfoot-labs",
-    title: "Moonfoot Labs",
-    company: "Moonfoot Labs",
-    description:
-      "AI-native product studio partnering with founders and early-stage teams to build validated, scalable products using LLM workflows and rapid prototyping.",
-    role: "Co-Founder & Managing Partner",
-    image: "/images/projects/Moonfoot Labs/Moonfoot Labs Hero Image.png",
-    technologies: ["AI", "LLM Systems", "Rapid Prototyping", "Product Strategy"],
-    featured: true,
   },
 ];
 
 export const featuredProjects = projects.filter((p) => p.featured);
-

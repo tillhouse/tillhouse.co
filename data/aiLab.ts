@@ -47,6 +47,7 @@ export const aiLabProjects: AILabProject[] = [
       "Prosumer AI product-intelligence platform for competitive analysis and market research.",
     tools: ["Cursor", "Claude", "TypeScript"],
     status: "Experiment",
+    image: "/images/projects/Icarus Lens/project_02.png",
   },
   {
     slug: "swim-genie",
