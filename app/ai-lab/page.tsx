@@ -37,7 +37,7 @@ export default function AILabPage() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-cover object-[50%_30%]"
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-accent/10 to-purple-500/10">

@@ -11,6 +11,27 @@ export interface AILabProject {
 
 export const aiLabProjects: AILabProject[] = [
   {
+    slug: "2025-wrapped",
+    title: "2025 Wrapped (Gamma)",
+    description:
+      "A visual recap of 2025 — highlights, milestones, and the work behind the scenes, captured as a Gamma summary.",
+    tools: ["Gamma", "Cursor"],
+    status: "Live",
+    demoUrl: "/wrapped",
+    image: "/images/projects/2025 Wrapped/2025 Wrapped.png",
+  },
+  {
+    slug: "tillhouse-site",
+    title: "Tillhouse.co (Built in Cursor)",
+    description:
+      "This personal site was built end-to-end in Cursor, showcasing AI-native workflows across design, engineering, and content. Includes case studies, image galleries, and rapid iteration from prompt to production.",
+    tools: ["Cursor", "Next.js", "React", "Tailwind", "Vercel"],
+    status: "Live",
+    demoUrl: "https://tillhouse.co",
+    githubUrl: "https://github.com/tillhouse/tillhouse.co",
+    image: "/images/projects/Tillhouse.co/Tillhouse.co Hero.png",
+  },
+  {
     slug: "auth-monster",
     title: "AuthMonster",
     description:
