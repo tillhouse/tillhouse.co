@@ -7,7 +7,7 @@ export const projects: Project[] = [
     company: "Ghostery",
     description:
       "Led product strategy for privacy-first browser extension serving 10M+ users. Drove roadmap prioritization, user research, and cross-functional execution.",
-    role: "VP Product",
+    role: "President, Head of Product and Marketing",
     image: "/images/projects/Ghostery 8 - Browser Extension/Simple View.png",
     gallery: [
       "/images/projects/Ghostery 8 - Browser Extension/Simple View.png",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     company: "Ghostery",
     description:
       "Privacy-focused web browser built on Firefox. Led product vision, UX design, and launch strategy for a browser that blocks trackers by default.",
-    role: "VP Product",
+    role: "President, Head of Product and Marketing",
     image: "/images/projects/Ghostery Dawn/Ghostery Dawn.png",
     gallery: [
       "/images/projects/Ghostery Dawn/Ghostery Dawn.png",
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     company: "Ghostery",
     description:
       "Privacy-first search engine integrated with Ghostery Dawn. Delivers search results without tracking or profiling users.",
-    role: "VP Product",
+    role: "President, Head of Product and Marketing",
     image: "/images/projects/Ghostery Glow/Ghostery Dark Theme - Results Page.jpg",
     gallery: [
       "/images/projects/Ghostery Glow/Ghostery Dark Theme - Results Page.jpg",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
     company: "Ghostery",
     description:
       "Enterprise analytics platform providing tracker intelligence and privacy insights for businesses and researchers.",
-    role: "VP Product",
+    role: "President, Head of Product and Marketing",
     image: "/images/projects/Ghostery Insights/Insights Mockup.png",
     gallery: [
       "/images/projects/Ghostery Insights/Insights Mockup.png",
@@ -108,9 +108,36 @@ export const projects: Project[] = [
     company: "Ghostery",
     description:
       "Simplified privacy extension for Safari. Streamlined UX focused on ease-of-use while maintaining powerful tracker blocking.",
-    role: "VP Product",
-    image: "/images/projects/Ghostery Lite/Main UI.png",
+    role: "President, Head of Product and Marketing",
+    image: "/images/projects/Ghostery Lite/hero@3x-1024x647.webp",
+    gallery: [
+      "/images/projects/Ghostery Lite/hero@3x-1024x647.webp",
+      "/images/projects/Ghostery Lite/Main UI.png",
+      "/images/projects/Ghostery Lite/Category UI.png",
+      "/images/projects/Ghostery Lite/Category UI Saved.png",
+      "/images/projects/Ghostery Lite/Settings.png",
+      "/images/projects/Ghostery Lite/Settings Custom.png",
+      "/images/projects/Ghostery Lite/Trusted Sites.png",
+    ],
     technologies: ["Safari", "iOS", "Privacy Tech"],
+    featured: false,
+  },
+  {
+    slug: "ghostery-rewards",
+    title: "Ghostery Rewards",
+    company: "Ghostery",
+    description:
+      "Privacy-first performance marketing product that surfaced relevant offers without third-party tracking.",
+    role: "President, Head of Product and Marketing",
+    image: "/images/projects/Ghostery Rewards/Screen Shot 2018-03-12 at 10.33.30 AM.png",
+    gallery: [
+      "/images/projects/Ghostery Rewards/Screen Shot 2018-03-12 at 10.33.30 AM.png",
+      "/images/projects/Ghostery Rewards/Screen Shot 2018-03-12 at 10.39.44 AM.png",
+      "/images/projects/Ghostery Rewards/Screen Shot 2018-03-12 at 10.41.29 AM.png",
+      "/images/projects/Ghostery Rewards/Screen Shot 2018-03-12 at 10.42.52 AM.png",
+      "/images/projects/Ghostery Rewards/Screen Shot 2018-03-12 at 10.55.00 AM (1).png",
+    ],
+    technologies: ["Privacy Tech", "Performance Marketing", "Product Strategy"],
     featured: false,
   },
   {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Press_Start_2P } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -68,6 +69,7 @@ export default function RootLayout({
           <main className="min-h-screen">{children}</main>
           <Footer />
         </EightBitProvider>
+        <Analytics />
       </body>
     </html>
   );
