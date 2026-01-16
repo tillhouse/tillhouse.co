@@ -7,6 +7,8 @@ export const projects: Project[] = [
     company: "Moonfoot Labs",
     description:
       "AI-native product studio partnering with founders and early-stage teams to build validated, scalable products using LLM workflows and rapid prototyping.",
+    metaDescription:
+      "Moonfoot Labs is an AI-native product studio partnering with founders to validate, prototype, and scale products using LLM workflows.",
     role: "Co-Founder & Managing Partner",
     image: "/images/projects/Moonfoot Labs/Moonfoot Labs Hero Image.png",
     technologies: ["AI", "LLM Systems", "Rapid Prototyping", "Product Strategy"],
@@ -18,6 +20,8 @@ export const projects: Project[] = [
     company: "Innermap",
     description:
       "AI-native mental wellness platform leveraging LLMs for personalized journaling and reflection experiences.",
+    metaDescription:
+      "Innermap.ai is an AI-native mental wellness platform using LLMs for personalized journaling and guided reflection.",
     role: "Product Advisor",
     image: "/images/projects/Innermap/affi-devices.png",
     gallery: [
@@ -33,6 +37,8 @@ export const projects: Project[] = [
     company: "Ghostery",
     description:
       "Led product strategy for privacy-first browser extension serving 10M+ users. Drove roadmap prioritization, user research, and cross-functional execution.",
+    metaDescription:
+      "Ghostery browser extension: privacy-first tracker blocking for 10M+ users, with product strategy, research, and roadmap execution.",
     role: "President, Head of Product and Marketing",
     image: "/images/projects/Ghostery 8 - Browser Extension/Simple View.png",
     gallery: [
@@ -60,6 +66,8 @@ export const projects: Project[] = [
     company: "Ghostery",
     description:
       "Privacy-focused web browser built on Firefox. Led product vision, UX design, and launch strategy for a browser that blocks trackers by default.",
+    metaDescription:
+      "Ghostery Dawn: a privacy-first Firefox-based browser. Led product vision, UX design, and launch strategy for default tracker blocking.",
     role: "President, Head of Product and Marketing",
     image: "/images/projects/Ghostery Dawn/Ghostery Dawn.png",
     gallery: [
@@ -82,6 +90,8 @@ export const projects: Project[] = [
     company: "Ghostery",
     description:
       "Privacy-first search engine integrated with Ghostery Dawn. Delivers search results without tracking or profiling users.",
+    metaDescription:
+      "Ghostery Glow: a privacy-first search engine integrated with Ghostery Dawn, delivering results without tracking or profiling.",
     role: "President, Head of Product and Marketing",
     image: "/images/projects/Ghostery Glow/Ghostery Dark Theme - Results Page.jpg",
     gallery: [
@@ -99,6 +109,8 @@ export const projects: Project[] = [
     company: "Ghostery",
     description:
       "Enterprise analytics platform providing tracker intelligence and privacy insights for businesses and researchers.",
+    metaDescription:
+      "Ghostery Insights: enterprise analytics for tracker intelligence and privacy insights used by businesses and researchers.",
     role: "President, Head of Product and Marketing",
     image: "/images/projects/Ghostery Insights/Insights Mockup.png",
     gallery: [
@@ -118,6 +130,8 @@ export const projects: Project[] = [
     company: "Ghostery",
     description:
       "Simplified privacy extension for Safari. Streamlined UX focused on ease-of-use while maintaining powerful tracker blocking.",
+    metaDescription:
+      "Ghostery Lite: a simplified Safari extension with streamlined UX that keeps tracker blocking powerful and easy to use.",
     role: "President, Head of Product and Marketing",
     image: "/images/projects/Ghostery Lite/hero@3x-1024x647.webp",
     gallery: [
@@ -138,6 +152,8 @@ export const projects: Project[] = [
     company: "Ghostery",
     description:
       "Privacy-first performance marketing product that surfaced relevant offers without third-party tracking.",
+    metaDescription:
+      "Ghostery Rewards: privacy-first performance marketing that surfaced relevant offers without third‑party tracking.",
     role: "President, Head of Product and Marketing",
     image: "/images/projects/Ghostery Rewards/Screen Shot 2018-03-12 at 10.33.30 AM.png",
     gallery: [
@@ -151,11 +167,31 @@ export const projects: Project[] = [
     featured: false,
   },
   {
+    slug: "ghostery-midnight",
+    title: "Ghostery Midnight",
+    company: "Ghostery",
+    description:
+      "Desktop privacy application with OS-level tracker blocking, network monitoring, and integrated VPN functionality.",
+    metaDescription:
+      "Ghostery Midnight: a desktop privacy app with OS-level tracker blocking, network monitoring, and integrated VPN.",
+    role: "President, Head of Product and Marketing",
+    image: "/images/projects/Ghostery Midnight/Ghostery Midnight - Hero.png",
+    gallery: [
+      "/images/projects/Ghostery Midnight/Ghostery Midnight - Hero.png",
+      "/images/projects/Ghostery Midnight/Ghostery Midnight - 2.png",
+      "/images/projects/Ghostery Midnight/Ghostery Midnight - 3.png",
+    ],
+    technologies: ["Electron", "Desktop App", "VPN", "Privacy Tech"],
+    featured: false,
+  },
+  {
     slug: "pavilion",
     title: "Pavilion Digital",
     company: "Pavilion",
     description:
       "Fractional product leadership for B2B SaaS platform. Established product processes, led discovery, and shipped key features.",
+    metaDescription:
+      "Pavilion Digital: fractional product leadership for a B2B SaaS platform, improving discovery, process, and shipped features.",
     role: "Fractional VP Product",
     image: "/images/projects/Pavilion Digital/Home dashboard MVP Executive member.png",
     gallery: [

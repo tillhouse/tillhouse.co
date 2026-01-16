@@ -47,6 +47,7 @@ export function Footer() {
             <p className="mt-3 text-gray-600 text-sm max-w-xs">
               AI-native product leadership for startups building what&apos;s next.
             </p>
+            <p className="mt-2 text-gray-500 text-sm">New York City (NYC)</p>
           </div>
 
           {/* Quick Links */}

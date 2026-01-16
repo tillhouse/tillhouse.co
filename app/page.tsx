@@ -44,9 +44,9 @@ export default function Home() {
               AI-native product leadership for startups building what&apos;s next
             </h1>
             <p className="mt-6 text-xl text-gray-600">
-              Fractional and full-time product executive with deep experience
-              taking products from zero to one, scaling teams, and building
-              AI-powered software in real-world environments.
+              NYC-based product executive serving New York City startups with
+              deep experience taking products from zero to one, scaling teams,
+              and building AI-powered software in real-world environments.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button href="/services" size="lg">

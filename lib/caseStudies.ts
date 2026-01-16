@@ -8,6 +8,7 @@ const caseStudyFiles: Record<string, string> = {
   "ghostery-glow": "ghostery_glow_case_study.md",
   "ghostery-insights": "ghostery_insights_case_study.md",
   "ghostery-lite": "ghostery_lite_case_study.md",
+  "ghostery-midnight": "ghostery_midnight_case_study.md",
   "ghostery-rewards": "ghostery_rewards_case_study.md",
   pavilion: "pavilion_digital_case_study.md",
 };

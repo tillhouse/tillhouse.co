@@ -5,9 +5,9 @@ import { ContactForm } from "@/components/ContactForm";
 import { services } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Services | Jeremy Tillman",
+  title: "Services | Jeremy Tillman | NYC Product Leadership",
   description:
-    "Fractional product leadership, advisory, and full-time executive services for startups. Let's build something great together.",
+    "NYC-based fractional, interim, and full-time product leadership for startups. Advisory, coaching, and hands-on execution to ship better products.",
 };
 
 export default function ServicesPage() {
@@ -16,7 +16,7 @@ export default function ServicesPage() {
       <Section className="pt-32">
         <SectionHeader
           title="Services"
-          subtitle="I work with founders and teams in a few different ways, depending on their stage and needs."
+          subtitle="NYC-based product leadership for founders in New York City, Manhattan, and beyond."
         />
 
         <div className="space-y-6">

@@ -7,6 +7,7 @@ export interface Project {
   title: string;
   company: string;
   description: string;
+  metaDescription?: string;
   role: string;
   image: string;
   gallery?: string[];

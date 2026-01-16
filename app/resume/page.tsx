@@ -8,7 +8,7 @@ import { Download, Linkedin, Mail, Calendar, ExternalLink } from "lucide-react";
 export const metadata: Metadata = {
   title: "Resume | Jeremy Tillman",
   description:
-    "View Jeremy Tillman's resume and get in touch. Product executive with experience in AI, privacy tech, and B2B SaaS.",
+    "View Jeremy Tillman’s resume. Product executive with experience in AI, privacy tech, and B2B SaaS — available for leadership roles.",
 };
 
 const contactLinks = [

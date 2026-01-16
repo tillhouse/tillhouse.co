@@ -7,7 +7,7 @@ import { ExternalLink, Github } from "lucide-react";
 export const metadata: Metadata = {
   title: "AI Lab | Jeremy Tillman",
   description:
-    "An open workbench of AI-native products, prototypes, and experiments. Exploring the frontier of AI-powered tools.",
+    "AI Lab: an open workbench of AI-native products, prototypes, and experiments built with modern AI workflows.",
 };
 
 const statusColors = {

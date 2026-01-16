@@ -19,10 +19,28 @@ const pressStart = Press_Start_2P({
   display: "swap",
 });
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Jeremy Tillman",
+  url: "https://tillhouse.co",
+  jobTitle: "Product Executive",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "New York",
+    addressRegion: "NY",
+    addressCountry: "US",
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/jrtillman/",
+    "https://github.com/tillhouse",
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "Jeremy Tillman | AI-Native Product Leadership",
+  title: "Jeremy Tillman | NYC Product Executive & AI-Native Leadership",
   description:
-    "Fractional and full-time product executive helping startups build, ship, and scale AI-native products.",
+    "NYC-based product executive helping startups build and scale AI-native and privacy-focused products. Fractional, interim, and full-time leadership.",
   keywords: [
     "product leadership",
     "fractional executive",
@@ -36,9 +54,9 @@ export const metadata: Metadata = {
     apple: "/images/logos/Logo Files/Favicons/iPhone.png",
   },
   openGraph: {
-    title: "Jeremy Tillman | AI-Native Product Leadership",
+    title: "Jeremy Tillman | NYC Product Executive & AI-Native Leadership",
     description:
-      "Fractional and full-time product executive helping startups build, ship, and scale AI-native products.",
+      "NYC-based product executive helping startups build, ship, and scale AI-native products.",
     url: "https://tillhouse.co",
     siteName: "Tillhouse",
     locale: "en_US",
@@ -46,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jeremy Tillman | AI-Native Product Leadership",
+    title: "Jeremy Tillman | NYC Product Executive & AI-Native Leadership",
     description:
-      "Fractional and full-time product executive helping startups build, ship, and scale AI-native products.",
+      "NYC-based product executive helping startups build, ship, and scale AI-native products.",
   },
   robots: {
     index: true,
@@ -70,6 +88,12 @@ export default function RootLayout({
           <Footer />
         </EightBitProvider>
         <Analytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd),
+          }}
+        />
       </body>
     </html>
   );

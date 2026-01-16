@@ -5,9 +5,9 @@ import { Button } from "@/components/Button";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About | Jeremy Tillman",
+  title: "About | Jeremy Tillman | NYC Product Executive",
   description:
-    "Learn about Jeremy Tillman - product executive, AI enthusiast, and startup advisor with a passion for building what's next.",
+    "Learn about Jeremy Tillman — NYC-based product executive, AI-native builder, and startup advisor focused on privacy, growth, and product strategy.",
 };
 
 const philosophy = [
@@ -45,10 +45,13 @@ export default function AboutPage() {
             </h1>
             <div className="mt-6 space-y-4 text-lg text-gray-600">
               <p>
-                I&apos;m a product executive with over 15 years of experience
-                building software products and leading cross-functional teams.
-                My career has spanned consumer products, B2B platforms, privacy
-                technology, and — more recently — AI-native software.
+                I&apos;m a NYC-based product executive with over 15 years of
+                experience building software products and leading
+                cross-functional teams. I&apos;m based in the greater NYC area
+                (Westchester) and work out of Manhattan, partnering with founders
+                across New York City and beyond. My career has spanned consumer
+                products, B2B platforms, privacy technology, and — more recently
+                — AI-native software.
               </p>
               <p>
                 I&apos;ve worked across the full arc of product development:

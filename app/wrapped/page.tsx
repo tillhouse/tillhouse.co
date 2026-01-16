@@ -4,7 +4,7 @@ import { Section, SectionHeader } from "@/components/Section";
 export const metadata: Metadata = {
   title: "2025 Wrapped | Jeremy Tillman",
   description:
-    "A visual recap of 2025 — highlights, milestones, and the work behind the scenes.",
+    "2025 Wrapped: a visual recap of the year’s highlights, milestones, and the work behind the scenes.",
 };
 
 export default function WrappedPage() {

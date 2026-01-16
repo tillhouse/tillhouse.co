@@ -6,7 +6,7 @@ import { projects } from "@/data/projects";
 export const metadata: Metadata = {
   title: "Work | Jeremy Tillman",
   description:
-    "Portfolio of products I've built and shipped as a product executive. From privacy tech to AI-native applications.",
+    "Portfolio of products built and scaled across privacy tech, AI-native tools, and SaaS. Real outcomes and shipped work.",
 };
 
 export default function WorkPage() {
