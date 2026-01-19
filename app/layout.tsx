@@ -61,12 +61,21 @@ export const metadata: Metadata = {
     siteName: "Tillhouse",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://tillhouse.co/images/headshots/Tillman-00654-Edit.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Jeremy Tillman - NYC Product Executive",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Jeremy Tillman | NYC Product Executive & AI-Native Leadership",
     description:
       "NYC-based product executive helping startups build, ship, and scale AI-native products.",
+    images: ["https://tillhouse.co/images/headshots/Tillman-00654-Edit.jpg"],
   },
   robots: {
     index: true,
