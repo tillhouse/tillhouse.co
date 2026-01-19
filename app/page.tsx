@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { Section, SectionHeader } from "@/components/Section";
 import { Button } from "@/components/Button";
 import { ProjectCard } from "@/components/ProjectCard";
+import { HeadshotImage } from "@/components/HeadshotImage";
 import { featuredProjects } from "@/data/projects";
 import { Users, MessageSquare, Briefcase, ArrowRight } from "lucide-react";
 
@@ -59,11 +59,10 @@ export default function Home() {
             </div>
           </div>
           <div className="relative h-72 sm:h-80 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-            <Image
+            <HeadshotImage
               src="/images/headshots/Tillman-00654-Edit.jpg"
+              eightBitSrc="/images/headshots/Tillman-00654-Edit-8bit.png"
               alt="Jeremy Tillman"
-              fill
-              className="object-cover"
               priority
             />
           </div>

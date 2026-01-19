@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import { Section, SectionHeader } from "@/components/Section";
 import { Button } from "@/components/Button";
+import { HeadshotImage } from "@/components/HeadshotImage";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -69,10 +69,10 @@ export default function AboutPage() {
 
           {/* Headshot */}
           <div className="relative h-[450px] lg:h-[550px] bg-gray-100 rounded-lg overflow-hidden">
-            <Image
+            <HeadshotImage
               src="/images/headshots/Tillman-00693-Edit.jpg"
+              eightBitSrc="/images/headshots/Tillman-00693-Edit-8bit.png"
               alt="Jeremy Tillman"
-              fill
               className="object-cover object-top"
             />
           </div>
