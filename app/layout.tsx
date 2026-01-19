@@ -50,8 +50,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Jeremy Tillman" }],
   icons: {
-    icon: "/images/logos/Logo Files/Favicons/browser.png",
-    apple: "/images/logos/Logo Files/Favicons/iPhone.png",
+    icon: "/images/logos/Logo Files/Favicons/Favicon - Inverted.png",
+    apple: "/images/logos/Logo Files/Favicons/Favicon - Inverted.png",
   },
   openGraph: {
     title: "Jeremy Tillman | NYC Product Executive & AI-Native Leadership",
