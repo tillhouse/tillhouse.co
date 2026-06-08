@@ -2,6 +2,7 @@ import { Section, SectionHeader } from "@/components/Section";
 import { Button } from "@/components/Button";
 import { ProjectCard } from "@/components/ProjectCard";
 import { HeadshotImage } from "@/components/HeadshotImage";
+import { AskAfterDelay } from "@/components/feedback/AskAfterDelay";
 import { featuredProjects } from "@/data/projects";
 import { Users, MessageSquare, Briefcase, ArrowRight } from "lucide-react";
 
@@ -36,6 +37,8 @@ const logos = [
 export default function Home() {
   return (
     <>
+      <AskAfterDelay slug="homepage_intent" ms={8000} />
+
       {/* Hero Section */}
       <Section padding="xl" className="pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

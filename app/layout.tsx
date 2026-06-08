@@ -5,6 +5,7 @@ import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { EightBitProvider } from "@/components/EightBitProvider";
+import { VerdancyClientProvider } from "@/components/VerdancyClientProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -91,11 +92,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${pressStart.variable}`}>
       <body className="font-sans antialiased">
-        <EightBitProvider>
-          <Nav />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-        </EightBitProvider>
+        <VerdancyClientProvider>
+          <EightBitProvider>
+            <Nav />
+            <main className="min-h-screen">{children}</main>
+            <Footer />
+          </EightBitProvider>
+        </VerdancyClientProvider>
         <Analytics />
         <script
           type="application/ld+json"

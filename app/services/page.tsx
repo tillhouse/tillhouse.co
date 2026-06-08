@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import { Section, SectionHeader } from "@/components/Section";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ContactForm } from "@/components/ContactForm";
+import { AskOnView } from "@/components/feedback/AskOnView";
+import { AskOnExitIntent } from "@/components/feedback/AskOnExitIntent";
 import { services } from "@/data/services";
 
 export const metadata: Metadata = {
@@ -13,17 +15,19 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
+      <AskOnExitIntent slug="services_unwanted" />
+
       <Section className="pt-32">
         <SectionHeader
           title="Services"
           subtitle="NYC-based product leadership for founders in New York City, Manhattan, and beyond."
         />
 
-        <div className="space-y-6">
+        <AskOnView slug="services_missing" className="space-y-6">
           {services.map((service) => (
             <ServiceCard key={service.title} service={service} />
           ))}
-        </div>
+        </AskOnView>
       </Section>
 
       {/* Contact Section */}
