@@ -9,6 +9,8 @@ export interface Service {
   whoFor: string;
   whenItMakesSense: string;
   engagement: string;
+  pricing?: string;
+  pricingSource?: { label: string; url: string };
   included: string[];
 }
 
@@ -68,6 +70,22 @@ export function ServiceCard({ service }: ServiceCardProps) {
               </h4>
               <p className="mt-1 text-sm text-gray-600">{service.engagement}</p>
             </div>
+            {service.pricing && (
+              <div>
+                <h4 className="text-sm font-medium text-gray-900">Pricing</h4>
+                <p className="mt-1 text-sm text-gray-600">{service.pricing}</p>
+                {service.pricingSource && (
+                  <a
+                    href={service.pricingSource.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 inline-block text-xs text-gray-500 underline hover:text-accent"
+                  >
+                    {service.pricingSource.label}
+                  </a>
+                )}
+              </div>
+            )}
             <div>
               <h4 className="text-sm font-medium text-gray-900">
                 What&apos;s included

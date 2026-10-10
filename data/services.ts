@@ -4,6 +4,8 @@ export interface Service {
   whoFor: string;
   whenItMakesSense: string;
   engagement: string;
+  pricing?: string;
+  pricingSource?: { label: string; url: string };
   included: string[];
 }
 
@@ -15,6 +17,12 @@ export const services: Service[] = [
     whenItMakesSense:
       "I'm open to full-time roles where product is central to the company's strategy and success.",
     engagement: "Head of Product, VP Product, or CPO",
+    pricing:
+      "Market-based executive compensation, benchmarked at approximately $350K annual base salary, plus bonus, equity, and benefits.",
+    pricingSource: {
+      label: "Source: Salary.com, 2026 Chief Product Officer compensation (New York)",
+      url: "https://www.salary.com/research/salary/alternate/chief-product-officer-salary/ny",
+    },
     included: [
       "Full ownership of product vision and strategy",
       "Team building and management",
@@ -29,7 +37,9 @@ export const services: Service[] = [
     whoFor: "Startups that need senior product leadership but aren't ready for a full-time executive hire",
     whenItMakesSense:
       "I embed directly with your team, take ownership of product direction and execution, and help establish durable product practices.",
-    engagement: "Typical engagements range from 10–20 hours per week",
+    engagement: "Starting at 40 hours per month",
+    pricing:
+      "Monthly retainers from $15,000. Larger engagements are scoped and priced individually.",
     included: [
       "Product strategy and roadmap ownership",
       "Team leadership and hiring",
@@ -44,7 +54,9 @@ export const services: Service[] = [
     whoFor: "Founders or product leaders who want a strategic sounding board",
     whenItMakesSense:
       "This work is focused on decision-making, prioritization, AI adoption, and navigating complexity — not day-to-day execution.",
-    engagement: "Monthly retainer or project-based",
+    engagement: "5 hours per month",
+    pricing:
+      "Monthly retainers from $2,500. Larger or custom advisory engagements available.",
     included: [
       "1:1 coaching sessions",
       "Strategic input on key decisions",
