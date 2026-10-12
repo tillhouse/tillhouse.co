@@ -32,7 +32,7 @@ export default function ServicesPage() {
 
       {/* Contact Section */}
       <Section background="gray" id="contact">
-        <AskOnView slug="pricing_detail" className="max-w-2xl mx-auto">
+        <AskOnView slug="pricing_clarity" className="max-w-2xl mx-auto">
           <SectionHeader
             title="Let's Talk"
             subtitle="Send a message and I'll get back to you."
