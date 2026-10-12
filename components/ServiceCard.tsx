@@ -10,6 +10,7 @@ export interface Service {
   whenItMakesSense: string;
   engagement: string;
   pricing?: string;
+  priceSummary?: string;
   pricingSource?: { label: string; url: string };
   included: string[];
 }
@@ -43,6 +44,11 @@ export function ServiceCard({ service }: ServiceCardProps) {
             {service.title}
           </h3>
           <p className="mt-1 text-gray-600 text-sm">{service.whoFor}</p>
+          {service.priceSummary && (
+            <p className="mt-2 text-sm font-medium text-gray-700">
+              {service.priceSummary}
+            </p>
+          )}
         </div>
         <div className="flex-shrink-0 mt-1">
           {isExpanded ? (
