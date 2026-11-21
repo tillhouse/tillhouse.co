@@ -41,7 +41,16 @@ export default function AILabPage() {
         <p className="mt-2 mb-6 text-gray-600 max-w-2xl">
           I don&rsquo;t stop at specs. This is my commit history across work
           and side projects over the last year, most of it written with AI
-          coding agents.
+          coding agents.{" "}
+          <a
+            href="https://github.com/tillhouse"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-accent font-medium hover:underline"
+          >
+            <Github size={16} aria-hidden="true" />
+            See my GitHub profile
+          </a>
         </p>
         <GitHubStats />
         <div className="mt-8 space-y-8">
