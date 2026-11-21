@@ -19,6 +19,9 @@ export default function WorkPage() {
       />
       <AskOnView
         slug="work_intent"
+        // The case study grid is taller than a screen (several screens on
+        // phones), so the default 50% threshold is rarely or never reached.
+        options={{ threshold: 0 }}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
         {projects.map((project) => (

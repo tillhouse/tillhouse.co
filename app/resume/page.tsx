@@ -3,6 +3,7 @@ import { Section, SectionHeader } from "@/components/Section";
 import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/Button";
 import { InteractiveResume } from "@/components/InteractiveResume";
+import { AskOnView } from "@/components/feedback/AskOnView";
 import {
   Download,
   Linkedin,
@@ -63,9 +64,15 @@ export default function ResumePage() {
         </div>
 
         {/* Embedded Interactive Resume */}
-        <div className="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+        <AskOnView
+          slug="resume_visitor_intent"
+          // The resume is several screens tall, so the default 50% threshold
+          // is never reached. Fire as soon as any of it is on screen.
+          options={{ threshold: 0 }}
+          className="border border-gray-200 rounded-xl overflow-hidden shadow-sm"
+        >
           <InteractiveResume />
-        </div>
+        </AskOnView>
       </Section>
 
       {/* Direct Contact */}
