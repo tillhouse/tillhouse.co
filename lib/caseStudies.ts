@@ -3,6 +3,10 @@ import path from "path";
 
 // Map project slugs to their case study file names
 const caseStudyFiles: Record<string, string> = {
+  analog: "analog_case_study.md",
+  verdancy: "verdancy_case_study.md",
+  authmonster: "authmonster_case_study.md",
+  "25madison": "25madison_case_study.md",
   ghostery: "ghostery_browser_extension_case_study.md",
   "ghostery-dawn": "ghostery_dawn_case_study.md",
   "ghostery-glow": "ghostery_glow_case_study.md",

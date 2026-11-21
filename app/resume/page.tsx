@@ -3,12 +3,18 @@ import { Section, SectionHeader } from "@/components/Section";
 import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/Button";
 import { InteractiveResume } from "@/components/InteractiveResume";
-import { Download, Linkedin, Mail, Calendar, ExternalLink } from "lucide-react";
+import {
+  Download,
+  Linkedin,
+  Mail,
+  MessageSquare,
+  ExternalLink,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Resume | Jeremy Tillman",
   description:
-    "View Jeremy Tillman’s resume. Product executive with experience in AI, privacy tech, and B2B SaaS — available for leadership roles.",
+    "View Jeremy Tillman’s resume. Product executive, startup operator, and AI-native product builder: Head of Product at Analog, co-founder of Moonfoot Labs, former President of Ghostery.",
 };
 
 const contactLinks = [
@@ -25,10 +31,10 @@ const contactLinks = [
     href: "https://www.linkedin.com/in/jrtillman/",
   },
   {
-    icon: Calendar,
-    label: "Schedule a Call",
-    value: "Book a time",
-    href: "#", // Replace with Calendly link
+    icon: MessageSquare,
+    label: "Contact Me",
+    value: "Send me a message",
+    href: "#send-message",
   },
 ];
 
@@ -44,7 +50,7 @@ export default function ResumePage() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
           <Button
-            href="https://claude.ai/public/artifacts/81359795-14ba-41fb-be79-2e2f0cb6bfc1"
+            href="https://claude.ai/artifact/4yLExh6NJUfxW7nxQGhLik"
             external
           >
             <ExternalLink size={18} className="mr-2" />
@@ -107,7 +113,7 @@ export default function ResumePage() {
           </div>
 
           {/* Contact Form */}
-          <div>
+          <div id="send-message" className="scroll-mt-28">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Send a Message
             </h2>

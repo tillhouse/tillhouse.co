@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
@@ -108,16 +107,7 @@ export default function ProjectPage({ params }: Props) {
           {project.gallery && project.gallery.length > 0 ? (
             <ImageCarousel images={project.gallery} alt={project.title} />
           ) : project.image ? (
-            <div className="relative h-72 md:h-96 lg:h-[400px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg overflow-hidden">
-              <div className="absolute inset-6">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
+            <ImageCarousel images={[project.image]} alt={project.title} />
           ) : (
             <div className="relative h-72 md:h-96 lg:h-[400px] bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg overflow-hidden flex items-center justify-center">
               <span className="text-6xl font-bold text-accent/20">

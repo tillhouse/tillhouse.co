@@ -38,3 +38,9 @@ next-env.d.ts
 .idea/
 .vscode/
 
+
+# Private source material for site copy (resume, notes, case study drafts)
+/content-source/
+
+# Verdancy teaser video + soundtrack (kept locally, not used on the site)
+/public/images/projects/Verdancy/video/

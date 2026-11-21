@@ -12,42 +12,115 @@ import {
   MessageCircle,
 } from "lucide-react";
 
+function PortfolioLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-green-600 font-semibold hover:text-green-700 hover:underline"
+    >
+      {children}
+    </a>
+  );
+}
+
 const RESUME_DATA = {
   summary: {
     title: "Jeremy Tillman",
-    tagline: "Product Executive • Fractional Leader • AI Product Builder",
+    tagline: "Product Executive • Startup Operator • AI-Native Product Builder",
     location: "New York, NY",
     pitch:
-      "AI-native product executive and product builder with a track record of launching agentic products across B2B and B2C markets. I blend product strategy with hands-on prototyping, workflow automation, and LLM-driven systems design, bringing experience across 0→1 execution, growth-stage leadership, and full-spectrum business operations including P&L ownership, monetization, GTM strategy, and scaling distributed teams.",
+      "Product executive operating at the intersection of executive product leadership and hands-on, AI-native product building. At Analog, I lead product strategy, customer discovery, and roadmap for a platform helping college athletic programs manage agreements, budgets, caps, and payouts, and personally build forward-deployed, full-stack applications for paying pilot customers using Claude Code, Codex, and Cursor. I've owned P&Ls, built cross-functional product teams, and shaped GTM and monetization strategy, and I apply Jobs-to-be-Done and rapid validation to move teams from ambiguous opportunities to working product, fast.",
   },
   phases: [
     {
-      id: "ai-native",
-      title: "AI-Native Product Studio Era",
-      period: "2024 - Present",
-      theme: "Building the future of product development",
+      id: "ai-era",
+      title: "Lead and Build in the AI Era",
+      period: "2025 - Present",
+      theme: "Executive product ownership with hands-on AI-native building",
       icon: Sparkles,
       roles: [
         {
+          title: "Head of Product",
+          company: "Analog",
+          website: "https://goanalog.com/",
+          period: "Feb 2026 - Present",
+          location: "New York, NY",
+          description:
+            "Early-stage fintech company building infrastructure for the regulated and conditional movement of money and value, with early applications in college athletics.",
+          highlights: [
+            "Own company-wide product vision, strategy, discovery, and roadmap, partnering with founders, executive leadership, engineering, and customers",
+            "Joined as a fractional product leader and transitioned to full-time Head of Product as the company entered an early scaling phase",
+            "Personally build and deploy AI-native, full-stack applications for paying customers using Claude Code, Codex, and Cursor",
+            "Translate forward-deployed, customer-specific solutions into reusable, scalable platform capabilities",
+            "Lead product validation and pilot work with university customers",
+            "Establish product operating practices and build product organizational capabilities",
+          ],
+          skills: [
+            "Fintech",
+            "Platform Strategy",
+            "AI-Native Building",
+            "Customer Validation",
+          ],
+        },
+        {
           title: "Co-Founder & Managing Partner | Head of Product",
           company: "Moonfoot Labs",
-          website: "https://moonfoot.co/",
+          website: "https://moonfootlabs.com/",
           period: "Jan 2025 - Present",
           location: "Remote",
           description:
-            "AI-native product studio partnering with founders and early-stage teams to build validated, scalable products using LLM workflows and rapid prototyping.",
+            "Independent AI-native product studio that develops, launches, and operates original software products, with selective external partnerships.",
           highlights: [
-            "Led development of AuthMonster, a brand-forward B2C 2FA security app (alpha)",
-            "Led R&D for Icarus Lens, a prosumer AI product-intelligence platform",
-            "Created the Moonfoot Method — next-gen agile for AI-era product development",
-            "Built the Validation Playbook combining JTBD research and AI-driven discovery",
-            "Provided fractional product leadership to founders and early-stage teams",
+            "Shipped AuthMonster, a live consumer two-factor authentication app",
+            "Shipped Verdancy.ai, an embedded user research and analytics agent for Claude Code and other AI coding agents",
+            "Leading early-stage R&D on Icarus Lens, an AI-assisted, multi-agent research analysis initiative",
+            "Define product strategy, discovery, validation, prioritization, and go-to-market planning across the portfolio",
+            "Build and deploy production software with Claude Code, Codex, Cursor, Next.js, Supabase, and Vercel",
+            "Created the Moonfoot Method and supporting playbooks (Moonbook, Validation Playbook) for AI-era product development",
           ],
           skills: [
             "AI Product Development",
-            "LLM Systems",
-            "Rapid Prototyping",
-            "Product Strategy",
+            "Portfolio Strategy",
+            "Go-to-Market",
+            "Product Systems",
+          ],
+        },
+      ],
+    },
+    {
+      id: "validate",
+      title: "Validate and Create",
+      period: "2024 - 2026",
+      theme: "Founder partnership, 0→1 strategy, and rapid validation",
+      icon: Users,
+      roles: [
+        {
+          title: "Founder & Principal | Fractional Product Executive",
+          company: "Tillhouse Ventures",
+          website: "https://tillhouse.co/",
+          period: "Feb 2024 - Present",
+          location: "New York, NY",
+          description:
+            "Independent practice providing fractional executive product leadership and strategic advisory to startups and growth-stage companies.",
+          highlights: [
+            "Innermap.ai, Fractional Head of Product (2024 - Present): defined vision and roadmap for an AI therapy platform; led MVP development, B2C subscription and PLG onboarding design, and launch to first paying customers",
+            "Sellfire, Fractional CPO (Mar - Apr 2026): led JTBD discovery on sales-rep adoption and refined the MVP concept for an AI Performance Coach with engineering",
+            "Singula Health, Fractional Head of Product (Jan - Apr 2026): led product strategy, specifications, and roadmap, advancing a lean health-tech product toward an investor-ready prototype",
+            "Advise founders on product direction, product-market fit, roadmap prioritization, team structure, and hiring",
+          ],
+          skills: [
+            "Fractional Leadership",
+            "JTBD",
+            "Founder Advisory",
+            "Product Launch",
           ],
         },
         {
@@ -57,13 +130,22 @@ const RESUME_DATA = {
           period: "Apr 2025 - Jan 2026",
           location: "New York, NY (Hybrid)",
           description:
-            "Venture studio supporting AI-first B2B SaaS incubations across industrial operations, logistics, analytics, and professional services.",
+            "Venture studio that partners with founders and enterprises to incubate and launch new technology companies.",
           highlights: [
-            "Supported 8 AI-first B2B SaaS incubations across 0→1 ventures",
-            "Defined product vision, problem spaces, and early roadmaps",
-            "Designed JTBD-informed validation plans and rapid learning cycles",
-            "Coached founders on modern, product-led practices",
-            "Applied cross-portfolio learnings to accelerate convergence on viable directions",
+            <>
+              Supported 8 AI-first B2B incubations, including{" "}
+              <PortfolioLink href="https://bidferra.com">Ferra</PortfolioLink>{" "}
+              (structural steel estimating),{" "}
+              <PortfolioLink href="https://letmason.com">Mason</PortfolioLink>{" "}
+              (litigation),{" "}
+              <PortfolioLink href="https://letsoffload.com">Offload</PortfolioLink>{" "}
+              (heavy-haul logistics), and{" "}
+              <PortfolioLink href="https://getjain.com">Jain</PortfolioLink>{" "}
+              (commercial cleaning bids)
+            </>,
+            "Shaped product vision, problem spaces, and early roadmaps to focus founders on the highest-value problems",
+            "Led JTBD customer discovery and built prototypes to reduce uncertainty before larger development investments",
+            "Coached founders and cross-functional teams on modern, product-led practices and repeatable rapid validation",
           ],
           skills: [
             "Portfolio Leadership",
@@ -72,31 +154,14 @@ const RESUME_DATA = {
             "Founder Coaching",
           ],
         },
-        {
-          title: "Fractional Head of Product",
-          company: "Innermap",
-          website: "https://innermap.ai/",
-          period: "Feb 2024 - Present",
-          location: "Remote",
-          description:
-            "AI mental health platform delivering Emotion Focused Therapy through an agentic conversational companion built on LLMs.",
-          highlights: [
-            "Defined product vision and roadmap for AI therapy platform",
-            "Led MVP development and beta testing using rapid build-test-learn sprints",
-            "Launched B2C product, acquiring first paying customers",
-            "Designed B2C subscription model and PLG onboarding flows",
-            "Defined B2B platform strategy for therapist use cases",
-          ],
-          skills: ["Product Launch", "B2C Subscription", "PLG", "AI Therapy"],
-        },
       ],
     },
     {
-      id: "portfolio",
-      title: "Portfolio Leadership Phase",
-      period: "2022 - 2024",
-      theme: "Fractional executive supporting growth-stage companies",
-      icon: Users,
+      id: "scale",
+      title: "Scale and Lead",
+      period: "2014 - 2023",
+      theme: "Product and business leadership at scale",
+      icon: Award,
       roles: [
         {
           title: "VP of Product",
@@ -134,15 +199,6 @@ const RESUME_DATA = {
           ],
           skills: ["Product Strategy", "UX Design", "Recruiting"],
         },
-      ],
-    },
-    {
-      id: "ghostery",
-      title: "The Ghostery Era",
-      period: "2014 - 2021",
-      theme: "Building and scaling a privacy-first consumer product",
-      icon: Award,
-      roles: [
         {
           title: "President, Head of Product & Marketing",
           company: "Ghostery",
@@ -312,14 +368,15 @@ const RESUME_DATA = {
     },
   ],
   skills: {
-    "AI Product Development": [
+    "AI-Native Product Development": [
       "LLM Systems",
-      "AI Workflows",
-      "Prompt Design",
-      "Rapid Prototyping",
-      "Replit",
-      "Lovable",
+      "AI Agents & Workflows",
+      "Claude Code",
+      "Codex",
       "Cursor",
+      "Next.js / React",
+      "Supabase",
+      "Vercel",
     ],
     "Product Operations": [
       "Agile/Scrum",
@@ -336,6 +393,8 @@ const RESUME_DATA = {
       "GTM Strategy",
       "Business Model Development",
       "Team Scaling",
+      "Fintech",
+      "B2B SaaS",
     ],
     "Technology Platforms": [
       "Web Apps",
@@ -353,7 +412,7 @@ interface InteractiveResumeProps {
 }
 
 export function InteractiveResume({ onOpenFullVersion }: InteractiveResumeProps) {
-  const [expandedPhase, setExpandedPhase] = useState<string | null>("ai-native");
+  const [expandedPhase, setExpandedPhase] = useState<string | null>("ai-era");
 
   return (
     <div className="bg-gray-50 text-gray-800 font-sans relative overflow-hidden rounded-lg">
@@ -635,7 +694,7 @@ export function InteractiveResume({ onOpenFullVersion }: InteractiveResumeProps)
 
       {/* Chat Button - Links to full version */}
       <a
-        href="https://claude.ai/public/artifacts/81359795-14ba-41fb-be79-2e2f0cb6bfc1"
+        href="https://claude.ai/artifact/4yLExh6NJUfxW7nxQGhLik"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 px-6 py-4 rounded-full bg-green-600 border-none cursor-pointer flex items-center justify-center gap-2.5 shadow-lg shadow-green-600/30 hover:scale-105 hover:shadow-xl hover:shadow-green-600/40 transition-all z-50 text-white font-semibold text-sm no-underline"

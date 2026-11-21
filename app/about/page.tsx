@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "About | Jeremy Tillman | NYC Product Executive",
   description:
-    "Learn about Jeremy Tillman — NYC-based product executive, AI-native builder, and startup advisor focused on privacy, growth, and product strategy.",
+    "Learn about Jeremy Tillman — NYC-based product executive, Head of Product at Analog, AI-native builder, and startup advisor focused on growth and product strategy.",
 };
 
 const philosophy = [
@@ -60,9 +60,13 @@ export default function AboutPage() {
                 alongside founders and boards.
               </p>
               <p>
-                In the last few years, I&apos;ve focused heavily on startup
-                incubation and fractional leadership, working hands-on with
-                early-stage teams while also building my own AI-driven products.
+                Today I&apos;m Head of Product at Analog, an early-stage fintech
+                company building infrastructure for the regulated movement of
+                money, where I lead product and personally build the software
+                our pilot customers use. I also co-founded Moonfoot Labs, an
+                independent studio where we&apos;ve launched AuthMonster and
+                Verdancy.ai, and through Tillhouse Ventures I take on a small
+                number of advisory engagements with founders.
               </p>
             </div>
           </div>

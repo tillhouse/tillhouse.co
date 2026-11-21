@@ -35,9 +35,9 @@ export const aiLabProjects: AILabProject[] = [
     slug: "auth-monster",
     title: "AuthMonster",
     description:
-      "Brand-forward B2C 2FA security app making two-factor authentication simple and delightful. Currently in alpha.",
+      "Brand-forward B2C 2FA security app making two-factor authentication simple and delightful. Live at authmonster.app.",
     tools: ["React Native", "Claude", "Lovable"],
-    status: "Prototype",
+    status: "Live",
     image: "/images/projects/AuthMonster/Google Play Store 1.png",
   },
   {

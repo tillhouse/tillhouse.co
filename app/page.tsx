@@ -28,10 +28,11 @@ const services = [
 ];
 
 const logos = [
+  { name: "Analog", logo: "/images/logos/analog.png" },
   { name: "Ghostery", logo: "/images/logos/ghostery.svg" },
-  { name: "Pavilion", logo: "/images/logos/pavilion.svg" },
-  { name: "Innermap", logo: "/images/logos/innermap.svg" },
-  { name: "Moonfoot", logo: "/images/logos/moonfoot.svg" },
+  { name: "Pavilion", logo: "/images/logos/pavilion.png" },
+  { name: "25madison", logo: "/images/logos/25madison.svg" },
+  { name: "Moonfoot Labs", logo: "/images/logos/moonfoot.svg" },
 ];
 
 export default function Home() {
@@ -47,9 +48,10 @@ export default function Home() {
               AI-native product leadership for startups building what&apos;s next
             </h1>
             <p className="mt-6 text-xl text-gray-600">
-              NYC-based product executive serving New York City startups with
-              deep experience taking products from zero to one, scaling teams,
-              and building AI-powered software in real-world environments.
+              NYC-based product executive and AI-native builder. Head of
+              Product at Analog, co-founder of Moonfoot Labs, and former
+              President of Ghostery, with deep experience taking products from
+              zero to one and scaling teams.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button href="/services" size="lg">
@@ -108,13 +110,15 @@ export default function Home() {
         </p>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
           {logos.map((company) => (
-            <div
+            // brightness-0 turns every logo (color or white) into a flat
+            // silhouette so the strip reads as one gray set, like the old text
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
               key={company.name}
-              className="text-gray-400 hover:text-gray-600 transition-colors"
-            >
-              {/* Placeholder for logo - will be replaced with actual images */}
-              <span className="text-xl font-semibold">{company.name}</span>
-            </div>
+              src={company.logo}
+              alt={company.name}
+              className="h-7 md:h-8 w-auto brightness-0 opacity-40 hover:opacity-60 transition-opacity"
+            />
           ))}
         </div>
       </Section>

@@ -2,43 +2,121 @@ import { Project } from "@/components/ProjectCard";
 
 export const projects: Project[] = [
   {
+    slug: "analog",
+    title: "Analog",
+    company: "Analog",
+    description:
+      "Leading product at an early-stage fintech building infrastructure for the regulated and conditional movement of money, starting with college athletics, and personally building the full-stack apps paying pilot customers use.",
+    metaDescription:
+      "Analog: product leadership and hands-on AI-native building at an early-stage fintech serving college athletic programs.",
+    role: "Head of Product",
+    image: "/images/projects/Analog/Analog Hero.png",
+    technologies: ["Fintech", "Platform Strategy", "Claude Code", "Next.js"],
+    link: "https://goanalog.com",
+    featured: true,
+  },
+  {
+    slug: "verdancy",
+    title: "Verdancy.ai",
+    company: "Moonfoot Labs",
+    description:
+      "Embedded user research and analytics agent for Claude Code and other AI coding agents: a widget asks real users short questions tied to product hypotheses, and the coding agent reads the answers and acts on them.",
+    metaDescription:
+      "Verdancy.ai is an embedded user research and analytics agent for Claude Code and other AI coding agents, built at Moonfoot Labs.",
+    role: "Co-Founder & Head of Product",
+    image: "/images/projects/Verdancy/cli/02-analysis.png",
+    gallery: [
+      "/images/projects/Verdancy/cli/02-analysis.png",
+      "/images/projects/Verdancy/cli/01-install.png",
+      "/images/projects/Verdancy/widget/01-question-card.png",
+      "/images/projects/Verdancy/widget/02-answer-selected.png",
+      "/images/projects/Verdancy/widget/03-rating.png",
+      "/images/projects/Verdancy/widget/04-bubble.png",
+      "/images/projects/Verdancy/hero/01-project-overview.png",
+      "/images/projects/Verdancy/hero/02-hypothesis-metrics.png",
+      "/images/projects/Verdancy/hero/03-analysis.png",
+      "/images/projects/Verdancy/hero/04-recommendations.png",
+      "/images/projects/Verdancy/hero/05-feedback.png",
+    ],
+    technologies: ["AI Agents", "MCP", "Next.js", "Supabase"],
+    link: "https://verdancy.ai",
+    featured: true,
+  },
+  {
+    slug: "authmonster",
+    title: "AuthMonster",
+    company: "Moonfoot Labs",
+    description:
+      "Live consumer two-factor authentication app that makes 2FA simple and approachable.",
+    metaDescription:
+      "AuthMonster is a live consumer two-factor authentication app built and launched by Moonfoot Labs.",
+    role: "Co-Founder & Head of Product",
+    image: "/images/projects/AuthMonster/Google Play store feature image.png",
+    gallery: [
+      "/images/projects/AuthMonster/Google Play store feature image.png",
+      "/images/projects/AuthMonster/Google Play Store 1.png",
+      "/images/projects/AuthMonster/Google Play Store 2.png",
+      "/images/projects/AuthMonster/Google Play Store 3.png",
+      "/images/projects/AuthMonster/Google Play Store 4.png",
+      "/images/projects/AuthMonster/Google Play Store 5.png",
+    ],
+    technologies: ["Consumer Security", "Mobile", "2FA", "AI-Native Building"],
+    link: "https://authmonster.app",
+    featured: false,
+  },
+  {
+    slug: "25madison",
+    title: "25madison Venture Studio",
+    company: "25madison",
+    description:
+      "Product leadership across 8 AI-first B2B incubations, including Ferra, Mason, Offload, and Jain: problem framing, JTBD discovery, prototypes, and founder coaching.",
+    metaDescription:
+      "Fractional product leadership at the 25madison venture studio across 8 AI-first B2B incubations.",
+    role: "Fractional Product Lead",
+    image: "/images/projects/25madison/25madison Hero.jpg",
+    technologies: ["Venture Studio", "JTBD", "Prototyping", "B2B SaaS"],
+    link: "https://www.25madison.com",
+    featured: false,
+  },
+  {
     slug: "moonfoot-labs",
     title: "Moonfoot Labs",
     company: "Moonfoot Labs",
     description:
-      "AI-native product studio partnering with founders and early-stage teams to build validated, scalable products using LLM workflows and rapid prototyping.",
+      "Independent AI-native product studio that develops, launches, and operates original software products, including AuthMonster and Verdancy.ai.",
     metaDescription:
-      "Moonfoot Labs is an AI-native product studio partnering with founders to validate, prototype, and scale products using LLM workflows.",
+      "Moonfoot Labs is an independent AI-native product studio that develops, launches, and operates original software products.",
     role: "Co-Founder & Managing Partner",
     image: "/images/projects/Moonfoot Labs/Moonfoot Labs Hero Image.png",
     technologies: ["AI", "LLM Systems", "Rapid Prototyping", "Product Strategy"],
-    featured: true,
+    link: "https://moonfootlabs.com",
+    featured: false,
   },
   {
     slug: "innermap",
     title: "Innermap.ai",
     company: "Innermap",
     description:
-      "AI-native mental wellness platform leveraging LLMs for personalized journaling and reflection experiences.",
+      "AI therapy platform delivering Emotion Focused Therapy through an LLM-powered conversational companion. Led MVP development, B2C subscription and onboarding design, and launch to first paying customers.",
     metaDescription:
-      "Innermap.ai is an AI-native mental wellness platform using LLMs for personalized journaling and guided reflection.",
-    role: "Product Advisor",
+      "Innermap.ai is an AI therapy platform; fractional product leadership through MVP, subscription design, and launch to first paying customers.",
+    role: "Fractional Head of Product",
     image: "/images/projects/Innermap/affi-devices.png",
     gallery: [
       "/images/projects/Innermap/affi-devices.png",
       "/images/projects/Innermap/affi-laptop.png",
     ],
     technologies: ["AI/ML", "React Native", "LLMs", "Mental Health"],
-    featured: true,
+    featured: false,
   },
   {
     slug: "ghostery",
     title: "Ghostery",
     company: "Ghostery",
     description:
-      "Led product strategy for privacy-first browser extension serving 10M+ users. Drove roadmap prioritization, user research, and cross-functional execution.",
+      "Led product strategy for privacy-first browser extension serving 7M monthly active users. Drove roadmap prioritization, user research, and cross-functional execution.",
     metaDescription:
-      "Ghostery browser extension: privacy-first tracker blocking for 10M+ users, with product strategy, research, and roadmap execution.",
+      "Ghostery browser extension: privacy-first tracker blocking for 7M monthly active users, with product strategy, research, and roadmap execution.",
     role: "President, Head of Product and Marketing",
     image: "/images/projects/Ghostery 8 - Browser Extension/Simple View.png",
     gallery: [
@@ -189,10 +267,10 @@ export const projects: Project[] = [
     title: "Pavilion Digital",
     company: "Pavilion",
     description:
-      "Fractional product leadership for B2B SaaS platform. Established product processes, led discovery, and shipped key features.",
+      "Built and led Pavilion's first product and engineering team to create a centralized digital hub for its membership community of go-to-market leaders.",
     metaDescription:
-      "Pavilion Digital: fractional product leadership for a B2B SaaS platform, improving discovery, process, and shipped features.",
-    role: "Fractional VP Product",
+      "Pavilion Digital: building Pavilion's first product and engineering team and a centralized digital hub for its member community.",
+    role: "VP of Product",
     image: "/images/projects/Pavilion Digital/Home dashboard MVP Executive member.png",
     gallery: [
       "/images/projects/Pavilion Digital/Home dashboard MVP Executive member.png",
