@@ -94,7 +94,7 @@ function gatePage(status: number, message?: string) {
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="/shipit/favicon.svg" />
 <style>
-  :root { color-scheme: dark; }
+  :root { color-scheme: light; }
   * { box-sizing: border-box; }
   body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px;
     background: #1b2a4a; color: #2a2433; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
@@ -104,7 +104,9 @@ function gatePage(status: number, message?: string) {
   h1 span { color: #e8a23a; }
   p { margin: 0 0 18px; }
   .msg { color: #b3392f; font-weight: 600; margin: -6px 0 14px; }
-  input { width: 100%; padding: 12px; font: inherit; border: 3px solid #1b2a4a; background: #fff; }
+  input { width: 100%; padding: 12px; font: inherit; border: 3px solid #1b2a4a; background: #fff;
+    color: #1b2a4a; caret-color: #1b2a4a; }
+  input::placeholder { color: #7a7484; }
   button { width: 100%; margin-top: 12px; padding: 12px; font: inherit; font-weight: 700; cursor: pointer;
     background: #e8a23a; color: #1b2a4a; border: 3px solid #0f1830; box-shadow: 0 3px 0 #0f1830; }
   button:active { transform: translateY(2px); box-shadow: 0 1px 0 #0f1830; }
@@ -121,7 +123,8 @@ function gatePage(status: number, message?: string) {
       <input type="password" name="password" aria-label="Password" placeholder="Password" autocomplete="current-password" required autofocus />
       <button type="submit">Play</button>
     </form>
-    <p class="by">A game by <a href="https://tillhouse.co">Tillhouse Ventures</a></p>
+    <p class="by">A game by <a href="https://tillhouse.co">Tillhouse Ventures</a><br />
+      &copy; ${new Date().getFullYear()} Tillhouse Ventures. All rights reserved.</p>
   </main>
 </body>
 </html>`;
