@@ -37,7 +37,7 @@ const RESUME_DATA = {
     tagline: "Product Executive • Startup Operator • AI-Native Product Builder",
     location: "New York, NY",
     pitch:
-      "Product executive operating at the intersection of executive product leadership and hands-on, AI-native product building. At Analog, I lead product strategy, customer discovery, and roadmap for a platform helping college athletic programs manage agreements, budgets, caps, and payouts, and personally build forward-deployed, full-stack applications for paying pilot customers using Claude Code, Codex, and Cursor. I've owned P&Ls, built cross-functional product teams, and shaped GTM and monetization strategy, and I apply Jobs-to-be-Done and rapid validation to move teams from ambiguous opportunities to working product, fast.",
+      "Product executive operating at the intersection of executive product leadership and hands-on, AI-native product building. At Analog, I lead product strategy, customer discovery, and roadmap for a platform helping college athletic programs manage agreements, budgets, caps, and payouts, and build forward-deployed products that our pilot partners use and give feedback on, built with Claude Code, deployed on Vercel, and backed by Supabase. I've owned P&Ls, built cross-functional product teams, and shaped GTM and monetization strategy, and I apply Jobs-to-be-Done and rapid validation to move teams from ambiguous opportunities to working product, fast.",
   },
   phases: [
     {
@@ -58,7 +58,7 @@ const RESUME_DATA = {
           highlights: [
             "Own company-wide product vision, strategy, discovery, and roadmap, partnering with founders, executive leadership, engineering, and customers",
             "Joined as a fractional product leader and transitioned to full-time Head of Product as the company entered an early scaling phase",
-            "Personally build and deploy AI-native, full-stack applications for paying customers using Claude Code, Codex, and Cursor",
+            "Build forward-deployed products that pilot partners use and give feedback on, built with Claude Code, deployed on Vercel, and backed by Supabase",
             "Translate forward-deployed, customer-specific solutions into reusable, scalable platform capabilities",
             "Lead product validation and pilot work with university customers",
             "Establish product operating practices and build product organizational capabilities",

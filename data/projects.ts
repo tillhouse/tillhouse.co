@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: "Analog",
     company: "Analog",
     description:
-      "Leading product at an early-stage fintech building infrastructure for the regulated and conditional movement of money, starting with college athletics, and personally building the full-stack apps paying pilot customers use.",
+      "Leading product at an early-stage fintech building infrastructure for the regulated and conditional movement of money, starting with college athletics, including building forward-deployed products our pilot partners use and give feedback on.",
     metaDescription:
       "Analog: product leadership and hands-on AI-native building at an early-stage fintech serving college athletic programs.",
     role: "Head of Product",

@@ -83,7 +83,7 @@ export const workflowSteps: WorkflowStep[] = [
   {
     title: "Build for real",
     description:
-      "Production code I write and ship myself with AI coding agents, the same way I build the apps Analog's pilot customers use.",
+      "Production code I write and ship myself with AI coding agents, the same way I build the forward-deployed products Analog's pilot partners use.",
     tools: ["Claude Code", "Cursor", "Codex"],
     icon: "Hammer",
   },
@@ -155,7 +155,7 @@ export const inProduction: { slug: string; title: string; blurb: string }[] = [
   {
     slug: "analog",
     title: "Analog",
-    blurb: "Full-stack apps paying pilot customers use, built with Claude Code.",
+    blurb: "Forward-deployed products pilot partners use, built with Claude Code.",
   },
   {
     slug: "verdancy",

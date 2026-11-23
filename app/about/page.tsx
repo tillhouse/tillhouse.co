@@ -62,8 +62,9 @@ export default function AboutPage() {
               <p>
                 Today I&apos;m Head of Product at Analog, an early-stage fintech
                 company building infrastructure for the regulated movement of
-                money, where I lead product and personally build the software
-                our pilot customers use. I also co-founded Moonfoot Labs, an
+                money, where I lead product and build forward-deployed products
+                our pilot partners use and give us feedback on. I also
+                co-founded Moonfoot Labs, an
                 independent studio where we&apos;ve launched AuthMonster and
                 Verdancy.ai, and through Tillhouse Ventures I take on a small
                 number of advisory engagements with founders.
