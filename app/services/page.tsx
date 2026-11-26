@@ -3,7 +3,6 @@ import { Section, SectionHeader } from "@/components/Section";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ContactForm } from "@/components/ContactForm";
 import { AskOnView } from "@/components/feedback/AskOnView";
-import { AskOnExitIntent } from "@/components/feedback/AskOnExitIntent";
 import { services } from "@/data/services";
 
 export const metadata: Metadata = {
@@ -15,8 +14,6 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <AskOnExitIntent slug="services_unwanted" />
-
       <Section className="pt-32">
         <SectionHeader
           title="Services"
