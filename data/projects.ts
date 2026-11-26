@@ -43,6 +43,32 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    slug: "ship-it",
+    title: "Ship It!",
+    company: "Tillhouse Ventures",
+    description:
+      "A 16-bit isometric business sim about running a digital agency, from a garage with $2,000 to a whole office building. Designed and built in three days with Claude Opus 5.5 in Claude Code.",
+    metaDescription:
+      "Ship It!: a 16-bit digital agency sim built in three days with Claude Opus 5.5 and Claude Code, using Phaser 3, TypeScript and Vite.",
+    role: "Creator, Designer & Builder",
+    image: "/images/projects/Ship It/01-key-art.png",
+    gallery: [
+      "/images/projects/Ship It/01-key-art.png",
+      "/images/projects/Ship It/02-garage.png",
+      "/images/projects/Ship It/03-build-board.png",
+      "/images/projects/Ship It/04-studio.png",
+      "/images/projects/Ship It/05-cloud-down.png",
+      "/images/projects/Ship It/06-boardroom-poach.png",
+    ],
+    video: {
+      src: "/images/projects/Ship It/ship-it-teaser.mp4",
+      poster: "/images/projects/Ship It/01-key-art.png",
+      title: "Teaser trailer",
+    },
+    technologies: ["Claude Code", "Claude Opus 5.5", "Phaser 3", "TypeScript"],
+    featured: false,
+  },
+  {
     slug: "authmonster",
     title: "AuthMonster",
     company: "Moonfoot Labs",

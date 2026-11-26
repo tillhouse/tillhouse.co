@@ -11,6 +11,8 @@ export interface Project {
   role: string;
   image: string;
   gallery?: string[];
+  /** Optional trailer or demo video shown on the case study page. */
+  video?: { src: string; poster?: string; title?: string };
   technologies: string[];
   link?: string;
   featured?: boolean;

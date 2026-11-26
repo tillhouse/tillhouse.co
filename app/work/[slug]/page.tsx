@@ -118,6 +118,25 @@ export default function ProjectPage({ params }: Props) {
         </div>
       </Section>
 
+      {/* Trailer / demo video */}
+      {project.video && (
+        <Section className="pt-0">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            {project.video.title ?? "Watch"}
+          </h2>
+          <div className="relative w-full overflow-hidden rounded-lg bg-black aspect-video">
+            <video
+              className="absolute inset-0 h-full w-full"
+              src={project.video.src}
+              poster={project.video.poster}
+              controls
+              playsInline
+              preload="metadata"
+            />
+          </div>
+        </Section>
+      )}
+
       {/* Case Study Content */}
       <Section background="gray">
         <div className="max-w-3xl">

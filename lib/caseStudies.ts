@@ -5,6 +5,7 @@ import path from "path";
 const caseStudyFiles: Record<string, string> = {
   analog: "analog_case_study.md",
   verdancy: "verdancy_case_study.md",
+  "ship-it": "ship_it_case_study.md",
   authmonster: "authmonster_case_study.md",
   "25madison": "25madison_case_study.md",
   ghostery: "ghostery_browser_extension_case_study.md",
