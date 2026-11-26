@@ -38,6 +38,11 @@ export const projects: Project[] = [
       "/images/projects/Verdancy/hero/04-recommendations.png",
       "/images/projects/Verdancy/hero/05-feedback.png",
     ],
+    video: {
+      src: "/images/projects/Verdancy/video/verdancy-teaser.mp4",
+      poster: "/images/projects/Verdancy/cli/02-analysis.png",
+      title: "Teaser trailer",
+    },
     technologies: ["AI Agents", "MCP", "Next.js", "Supabase"],
     link: "https://verdancy.ai",
     featured: true,

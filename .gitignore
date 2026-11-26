@@ -42,5 +42,5 @@ next-env.d.ts
 # Private source material for site copy (resume, notes, case study drafts)
 /content-source/
 
-# Verdancy teaser video + soundtrack (kept locally, not used on the site)
-/public/images/projects/Verdancy/video/
+# Verdancy teaser soundtrack (source audio, kept locally; the mp4 is used on the site)
+/public/images/projects/Verdancy/video/*.wav
