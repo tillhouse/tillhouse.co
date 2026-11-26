@@ -11,6 +11,10 @@ import { NextRequest, NextResponse } from "next/server";
 //   The two pages load Vercel Web Analytics on their own URLs, so the dashboard
 //   counts who reached the password page (/shipit/unlock) separately from who
 //   got into the game (/shipit). Invite links skip the password page.
+// - /shipit/api/event (play-time tracking) sits behind the same password, so
+//   only players who got in can send events.
+// - /shipit/stats is for the owner only: open /shipit/stats?key=<SHIPIT_STATS_KEY>
+//   once and a cookie keeps you in. Anyone else gets a 404.
 // - Everything under /shipit is sent with X-Robots-Tag: noindex.
 // - The preview image and favicon stay public so shared links unfurl.
 //
@@ -20,6 +24,8 @@ const COOKIE = "shipit_access";
 const PUBLIC_FILES = new Set(["/shipit/og.jpg", "/shipit/favicon.svg"]);
 const NOINDEX = { "X-Robots-Tag": "noindex, nofollow" };
 const UNLOCK = "/shipit/unlock";
+const STATS = "/shipit/stats";
+const STATS_COOKIE = "shipit_stats";
 const GAME_PAGES = new Set(["/shipit", "/shipit/", "/shipit/index.html"]);
 
 async function hash(value: string): Promise<string> {
@@ -46,6 +52,8 @@ export async function middleware(req: NextRequest) {
   if (PUBLIC_FILES.has(pathname)) {
     return NextResponse.next({ headers: NOINDEX });
   }
+
+  if (pathname === STATS) return statsGate(req);
 
   const password = process.env.SHIPIT_PASSWORD;
   if (!password) return gatePage(503, "The beta is closed right now.");
@@ -92,6 +100,29 @@ export async function middleware(req: NextRequest) {
 
   // Game assets requested without access: plain 401, no page.
   return new NextResponse("Unauthorized", { status: 401, headers: NOINDEX });
+}
+
+async function statsGate(req: NextRequest) {
+  const statsKey = process.env.SHIPIT_STATS_KEY;
+  const notFound = () => new NextResponse("Not found", { status: 404, headers: NOINDEX });
+  if (!statsKey) return notFound();
+  const token = await hash(`stats:${statsKey}`);
+  if (req.cookies.get(STATS_COOKIE)?.value === token) {
+    return NextResponse.next({ headers: NOINDEX });
+  }
+  const key = req.nextUrl.searchParams.get("key");
+  if (key !== null && (await hash(`stats:${key}`)) === token) {
+    const res = NextResponse.redirect(new URL(STATS, req.url), 303);
+    res.cookies.set(STATS_COOKIE, token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: STATS,
+      maxAge: 60 * 60 * 24 * 365,
+    });
+    return res;
+  }
+  return notFound();
 }
 
 function gatePage(status: number, message?: string) {
