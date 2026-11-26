@@ -3,6 +3,8 @@ import { Button } from "@/components/Button";
 import { ProjectCard } from "@/components/ProjectCard";
 import { HeadshotImage } from "@/components/HeadshotImage";
 import { AskAfterDelay } from "@/components/feedback/AskAfterDelay";
+import { AskOnExitIntent } from "@/components/feedback/AskOnExitIntent";
+import { AskFollowUp } from "@/components/feedback/AskFollowUp";
 import { featuredProjects } from "@/data/projects";
 import { Users, MessageSquare, Briefcase, ArrowRight } from "lucide-react";
 
@@ -38,7 +40,13 @@ const logos = [
 export default function Home() {
   return (
     <>
-      <AskAfterDelay slug="homepage_intent" ms={8000} />
+      <AskAfterDelay slug="homepage_problem" ms={12000} />
+      <AskFollowUp
+        after="homepage_problem"
+        ask="problem_attempts"
+        skipChoices={["Nothing pressing right now"]}
+      />
+      <AskOnExitIntent slug="homepage_exit" />
 
       {/* Hero Section */}
       <Section padding="xl" className="pt-32">
