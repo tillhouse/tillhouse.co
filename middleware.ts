@@ -7,6 +7,10 @@ import { NextRequest, NextResponse } from "next/server";
 // - Entering the password, or opening an invite link /shipit?key=<password>,
 //   sets a cookie holding a hash of the password. Changing the password in
 //   Vercel logs everyone out.
+// - Without access, /shipit redirects to the password page at /shipit/unlock.
+//   The two pages load Vercel Web Analytics on their own URLs, so the dashboard
+//   counts who reached the password page (/shipit/unlock) separately from who
+//   got into the game (/shipit). Invite links skip the password page.
 // - Everything under /shipit is sent with X-Robots-Tag: noindex.
 // - The preview image and favicon stay public so shared links unfurl.
 //
@@ -15,6 +19,8 @@ import { NextRequest, NextResponse } from "next/server";
 const COOKIE = "shipit_access";
 const PUBLIC_FILES = new Set(["/shipit/og.jpg", "/shipit/favicon.svg"]);
 const NOINDEX = { "X-Robots-Tag": "noindex, nofollow" };
+const UNLOCK = "/shipit/unlock";
+const GAME_PAGES = new Set(["/shipit", "/shipit/", "/shipit/index.html"]);
 
 async function hash(value: string): Promise<string> {
   const bytes = await crypto.subtle.digest(
@@ -45,11 +51,14 @@ export async function middleware(req: NextRequest) {
   if (!password) return gatePage(503, "The beta is closed right now.");
   const token = await hash(password);
 
+  const home = new URL("/shipit", req.url);
+  const unlock = new URL(UNLOCK, req.url);
+
   if (req.cookies.get(COOKIE)?.value === token) {
+    // Already in: the password page just sends you to the game.
+    if (pathname === UNLOCK) return NextResponse.redirect(home, 303);
     return NextResponse.next({ headers: NOINDEX });
   }
-
-  const home = new URL("/shipit", req.url);
 
   // Invite link: /shipit?key=...
   const key = searchParams.get("key");
@@ -57,11 +66,13 @@ export async function middleware(req: NextRequest) {
     if ((await hash(key)) === token) {
       return grantAccess(NextResponse.redirect(home, 303), token);
     }
-    return gatePage(401, "That invite link isn't valid anymore.");
+    unlock.searchParams.set("invite", "invalid");
+    return NextResponse.redirect(unlock, 303);
   }
 
-  // Password form posts back to /shipit.
-  if (req.method === "POST" && pathname === "/shipit") {
+  // Password form posts to /shipit/unlock (and /shipit, for pages still open
+  // from before the password page moved).
+  if (req.method === "POST" && (pathname === UNLOCK || GAME_PAGES.has(pathname))) {
     const form = await req.formData().catch(() => null);
     const entered = form?.get("password");
     if (typeof entered === "string" && (await hash(entered)) === token) {
@@ -70,11 +81,17 @@ export async function middleware(req: NextRequest) {
     return gatePage(401, "Wrong password. Try again.");
   }
 
-  // Game assets requested without access: plain 401, no page.
-  if (pathname !== "/shipit" && pathname !== "/shipit/" && pathname !== "/shipit/index.html") {
-    return new NextResponse("Unauthorized", { status: 401, headers: NOINDEX });
+  if (pathname === UNLOCK) {
+    return searchParams.get("invite") === "invalid"
+      ? gatePage(401, "That invite link isn't valid anymore.")
+      : gatePage(200);
   }
-  return gatePage(401);
+
+  // The game without access: go to the password page.
+  if (GAME_PAGES.has(pathname)) return NextResponse.redirect(unlock, 307);
+
+  // Game assets requested without access: plain 401, no page.
+  return new NextResponse("Unauthorized", { status: 401, headers: NOINDEX });
 }
 
 function gatePage(status: number, message?: string) {
@@ -93,6 +110,8 @@ function gatePage(status: number, message?: string) {
 <meta property="og:image" content="https://tillhouse.co/shipit/og.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="/shipit/favicon.svg" />
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
 <style>
   :root { color-scheme: light; }
   * { box-sizing: border-box; }
@@ -119,7 +138,7 @@ function gatePage(status: number, message?: string) {
     <h1>Ship <span>It!</span></h1>
     <p>Private beta. Enter the password you were sent.</p>
     ${error}
-    <form method="post" action="/shipit">
+    <form method="post" action="${UNLOCK}">
       <input type="password" name="password" aria-label="Password" placeholder="Password" autocomplete="current-password" required autofocus />
       <button type="submit">Play</button>
     </form>
